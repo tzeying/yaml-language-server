@@ -61,6 +61,7 @@
     "@typescript-eslint/parser": "^4.16.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.5",
+    "dotenv-webpack": "^7.0.2",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -71,8 +72,12 @@
     "sinon": "^9.0.3",
     "sinon-chai": "^3.5.0",
     "source-map-support": "^0.5.12",
+    "ts-loader": "^9.2.2",
     "ts-node": "^5.0.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "umd-compat-loader": "^2.1.2",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
     "clean": "rimraf out/server && rimraf lib",
@@ -87,7 +92,8 @@
     "build:libs": "yarn compile:umd && yarn compile:esm",
     "compile:umd": "tsc -p ./tsconfig.umd.json",
     "compile:esm": "tsc -p ./tsconfig.esm.json",
-    "check-dependencies": "node ./scripts/check-dependencies.js"
+    "check-dependencies": "node ./scripts/check-dependencies.js",
+    "webpack": "webpack --mode=development"
   },
   "nyc": {
     "extension": [
