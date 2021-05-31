@@ -1,8 +1,8 @@
 {
-  "name": "yaml-language-server",
-  "description": "YAML language server",
+  "name": "yaml-language-service",
+  "description": "YAML language service, built with Webpack. Forked from Yaml Language Server. ",
   "version": "0.19.2",
-  "author": "Gorkem Ercan (Red Hat)",
+  "author": "Tzeying Cheng",
   "license": "MIT",
   "contributors": [
     {
