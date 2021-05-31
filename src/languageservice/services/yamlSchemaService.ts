@@ -286,6 +286,7 @@ export class YAMLSchemaService extends JSONSchemaService {
         seen[schemaFromModeline] = true;
       }
 
+      resource = URI.parse(resource).with({ fragment: null, query: null }).toString();
       for (const entry of this.filePatternAssociations) {
         if (entry.matchesPattern(resource)) {
           for (const schemaId of entry.getURIs()) {
